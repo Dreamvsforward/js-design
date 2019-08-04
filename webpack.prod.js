@@ -3,8 +3,8 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: __dirname,
-        filename: './release/bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[hash].bundle.js'
     },
 
     module: {
@@ -27,19 +27,5 @@ module.exports = {
         new htmlWebpackPlugin({
             template: './index.html'
         })
-    ],
-    devServer: {
-        contentBase: path.join(__dirname, './release'), // 根目录
-        open: true, // 自动打开浏览器
-        port: 9000
-    }
+    ]
 }
-// const path = require('path');
-
-// module.exports = {
-//   entry: './src/index.js',
-//   output: {
-//       path: path.resolve(__dirname, 'dist'),
-//     filename: 'bundle.js'
-//   }
-// };
