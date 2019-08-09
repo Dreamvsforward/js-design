@@ -10,6 +10,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[name].[ext]'
+                }
+            },       
+            {
                 test: /\.js?$/,
                 exclude: /(node_modules)/,
                 loader: 'babel-loader'
