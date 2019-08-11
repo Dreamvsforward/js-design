@@ -1,7 +1,11 @@
+.header {
+    border: 10px solid yellow;
+    background: url('../img/s-bg.png') no-repeat;
+    background-size: 100% 100%;
+}
 body{
     transition: width 2s;
     h1{
         color: red;
-        transform: translate(100px, 100px);
     }
 }
